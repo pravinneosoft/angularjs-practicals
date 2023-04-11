@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div ng-app="my-app"ng-controller="myctl">
+        <!-- <p>{{fullname()  }}</p> -->
+        <ul>
+            <li ng-repeat="x in names">{{x.name+" "+x.lastname}}</li>
+        </ul>
+      </div>
+  
+      <script>
+          angular.module("my-app",[]).controller("myctl",function($scope){
+            //   $scope.firstname="john";
+            //   $scope.lastname="does";
+            //   $scope.fullname=function(){
+            //    return $scope.firstname +"  "+$scope.lastname
+            //   }
+            $scope.names=[
+                {name:'pravin',lastname:'satpute'},
+                {name:'pravin2',lastname:'satpute2'},
+                {name:'pravin3',lastname:'satpute3'},
+                {name:'pravin4',lastname:'satpute4'},
+                {name:'pravin5',lastname:'satpute5'}
+            ];
+          })
+        
+        </script>
+</body>
+</html>

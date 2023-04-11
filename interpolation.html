@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"ng-app="my-app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="myctl">
+    <h1>
+        hello my name is {{name +'how r u'}}
+    </h1></div>
+    <script>
+         var app = angular.module("my-app",[]);
+    app.controller("myctl",function($scope,$timeout){
+        $scope.name='tony';
+        $timeout(function(){
+            $scope.name='everyday';
+        },3000)
+    })
+    </script>
+</body>
+</html>
